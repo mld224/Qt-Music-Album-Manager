@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1026</width>
+    <height>717</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Album Manager</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLineEdit" name="champFiltre">
+      <property name="placeholderText">
+       <string>Filter albums...</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout">
+        <item>
+         <widget class="QListWidget" name="listeAlbums"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="champImage">
+          <property name="minimumSize">
+           <size>
+            <width>150</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QFormLayout" name="formLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="labelTitre">
+          <property name="text">
+           <string>Title:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="champTitre"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="labelArtiste">
+          <property name="text">
+           <string>Artist:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="champArtiste"/>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="labelCompositeur">
+          <property name="text">
+           <string>Composer:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="champCompositeur"/>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="labelAnnee">
+          <property name="text">
+           <string>Year:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="champAnnee"/>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="labelPrix">
+          <property name="text">
+           <string>Price (€):</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLineEdit" name="champPrix"/>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="labelCategorie">
+          <property name="text">
+           <string>Category:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QComboBox" name="champCategorie">
+          <item>
+           <property name="text">
+            <string>pop</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>rock</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>blues</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>jazz</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>rap</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>classical</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>French variety</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>electronic</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="6" column="0">
+         <widget class="QLabel" name="labelSupport">
+          <property name="text">
+           <string>Support:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="1">
+         <widget class="QComboBox" name="champSupport">
+          <item>
+           <property name="text">
+            <string>LP</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Cassette</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CD</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>MP3</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>AAC/M4A</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>FLAC</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="labelNotes">
+          <property name="text">
+           <string>Notes:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1">
+         <widget class="QPlainTextEdit" name="champNotes"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="boutonSauvegarder">
+      <property name="text">
+       <string>Update</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout">
+      <item>
+       <widget class="QPushButton" name="boutonAjouterAlbum">
+        <property name="text">
+         <string>Add album</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="boutonSupprimerAlbum">
+        <property name="text">
+         <string>Delete album</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tableMorceaux">
+      <column>
+       <property name="text">
+        <string>Rank</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Title</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Duration (min:s)</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Appreciation (%)</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelTotalMinutes">
+      <property name="text">
+       <string>Total: 00:00</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout">
+      <item>
+       <widget class="QPushButton" name="boutonAjouterMorceau">
+        <property name="text">
+         <string>Add track</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="boutonSupprimerMorceau">
+        <property name="text">
+         <string>Delete track</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QPushButton" name="boutonQuitter">
+      <property name="text">
+       <string>Quit</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1026</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFichier">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionCharger_JSON"/>
+    <addaction name="actionCharger_XML"/>
+    <addaction name="actionEnregistrer_JSON"/>
+    <addaction name="actionEnregistrer_sous_JSON"/>
+    <addaction name="actionEnregistrer_XML"/>
+    <addaction name="actionEnregistrer_sous_XML"/>
+    <addaction name="actionQuitter"/>
+   </widget>
+   <widget class="QMenu" name="menuLangue">
+    <property name="title">
+     <string>Language</string>
+    </property>
+    <addaction name="actionFrancais"/>
+    <addaction name="actionAnglais"/>
+   </widget>
+   <addaction name="menuFichier"/>
+   <addaction name="menuLangue"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionCharger_JSON">
+   <property name="text">
+    <string>Load JSON</string>
+   </property>
+  </action>
+  <action name="actionCharger_XML">
+   <property name="text">
+    <string>Load XML</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_JSON">
+   <property name="text">
+    <string>Save JSON</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_sous_JSON">
+   <property name="text">
+    <string>Save as JSON</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_XML">
+   <property name="text">
+    <string>Save XML</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_sous_XML">
+   <property name="text">
+    <string>Save as XML</string>
+   </property>
+  </action>
+  <action name="actionQuitter">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+  </action>
+  <action name="actionFrancais">
+   <property name="text">
+    <string>French</string>
+   </property>
+  </action>
+  <action name="actionAnglais">
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
